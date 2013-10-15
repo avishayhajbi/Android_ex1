@@ -4,7 +4,11 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="C:\Users\joe\AndroidStudioProjects\MyApplicationProject" />
+        <option name="externalProjectPath" value="C:\Users\joe\AndroidStudioProjects" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
       </GradleProjectSettings>
     </option>
   </component>
