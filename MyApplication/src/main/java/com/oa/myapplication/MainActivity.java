@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void bye(){
+    public void byebye (){
 
     }
 
