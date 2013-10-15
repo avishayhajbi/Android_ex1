@@ -6,13 +6,17 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import 	android.content.Intent;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
-
+    EditText editText;
+    //Bundle bun;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //bun = savedInstanceState;
     }
 
     @Override
@@ -45,7 +49,15 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void bye(){
+    public void showText (View view){
+
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        editText = (EditText) findViewById(R.id.tfName);
+        String str = editText.getText().toString();
+        intent.putExtra("name",str);
+        editText.setText("");
+        //onCreate( bun);
+        startActivity(intent);
 
     }
 

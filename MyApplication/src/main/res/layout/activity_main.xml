@@ -14,11 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Hello"
         android:id="@+id/button"
+        android:onClick="randImage"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="97dp"
-        android:onClick="randImage" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,18 +24,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Avishay Hajbi \nOfir Aghai."
         android:id="@+id/textView"
-        android:layout_marginRight="48dp"
-        android:layout_marginBottom="230dp"
-        android:layout_marginLeft="48dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
         android:textAlignment="center"
         android:textColor="#0001df"
         android:textSize="35dp"
         android:visibility="visible"
-        android:layout_marginTop="47dp" />
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -45,11 +38,9 @@
         android:id="@+id/imageViewLeft"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/button"
-        android:layout_alignTop="@+id/textView"
         android:layout_marginRight="-30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="50dp"
-        android:layout_marginTop="150dp"
         android:layout_alignParentBottom="true"
         android:src="@drawable/ofir"
         android:visibility="invisible" />
@@ -62,10 +53,31 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="11dp"
         android:layout_marginBottom="-5dp"
-        android:layout_alignTop="@+id/imageViewLeft"
         android:layout_toRightOf="@+id/imageViewLeft"
         android:layout_marginLeft="36dp"
         android:src="@drawable/hajbi"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/imageViewLeft" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/newname"
+        android:singleLine="false"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/imageViewRight"
+        android:layout_toRightOf="@+id/button"
+        android:onClick="showText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tfName"
+        android:layout_alignLeft="@+id/imageViewLeft"
+        android:layout_alignBottom="@+id/newname"
+        android:layout_alignTop="@+id/newname"
+        android:layout_alignRight="@+id/imageViewLeft"
+        android:hint="insert text" />
 
 </RelativeLayout>
