@@ -37,7 +37,6 @@ public class MainActivity extends Activity {
         }
         else if(imageL.getVisibility() == View.VISIBLE && imageR.getVisibility() == View.VISIBLE){     //everyone
             imageL.setVisibility(View.INVISIBLE);
-            imageR.setVisibility(View.VISIBLE);
             return;
         }
         else if(imageL.getVisibility() == View.INVISIBLE && imageR.getVisibility() == View.VISIBLE){     //just right
