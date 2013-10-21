@@ -62,8 +62,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
-        android:id="@+id/newname"
+        android:text="@string/send"
+        android:id="@+id/btsend"
         android:singleLine="false"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/imageViewRight"
@@ -74,10 +74,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tfName"
+        android:hint="insert text"
+        android:layout_alignBottom="@+id/btsend"
         android:layout_alignLeft="@+id/imageViewLeft"
-        android:layout_alignBottom="@+id/newname"
-        android:layout_alignTop="@+id/newname"
-        android:layout_alignRight="@+id/imageViewLeft"
-        android:hint="insert text" />
+        android:layout_alignRight="@+id/imageViewLeft" />
 
 </RelativeLayout>

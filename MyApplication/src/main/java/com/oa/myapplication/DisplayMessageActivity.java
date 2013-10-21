@@ -1,12 +1,13 @@
 package com.oa.myapplication;
 
-import android.content.Context;
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import 	android.content.Intent;
-import android.widget.EditText;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
+//import android.support.v4.app.FragmentActivity;
+//import android.support.v4.app.NavUtils;
 
 public class DisplayMessageActivity extends Activity {
 
@@ -15,26 +16,33 @@ public class DisplayMessageActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_message);
 
-
-
-
         Intent intent = getIntent();
         String message = intent.getStringExtra("name");
+
+        //System.out.println(R.string.send);
 
         if (message != null)
         {
             TextView text = (TextView) findViewById(R.id.newname);
             text.setText(message);
         }
+        // Make sure we're running on Honeycomb or higher to use ActionBar APIs
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            // Show the Up button in the action bar.
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
-
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.display_message, menu);
-        return true;
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
+
 
 
 

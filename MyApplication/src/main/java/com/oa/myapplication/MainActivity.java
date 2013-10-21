@@ -1,14 +1,15 @@
 package com.oa.myapplication;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+    EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,10 +46,18 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void bye(){
+
+    public void showText (View view)
+    {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        editText = (EditText) findViewById(R.id.tfName);
+        String str = editText.getText().toString();
+        intent.putExtra("name",str);
+        editText.setText("");
+        //onCreate( bun);
+        startActivity(intent);
 
     }
-
 
     
 }
